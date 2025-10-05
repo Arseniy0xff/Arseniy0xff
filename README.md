@@ -45,6 +45,10 @@
 
 - **[LogAnalyzer_v2](https://github.com/Arseniy0xff/LogAnalyzer_v2-preview-)** *// preview version, have a very poor functionality compared to 4 version, but already at this moment have codes example*
 
+## 📠 Contacts
+
+**E-mail:** `arseniy0xff@duck.com`
+
 ## 🫠 Pronouns
 
 - [***DIY Electronic***](https://www.youtube.com/@DIY_Electronic_tech)
