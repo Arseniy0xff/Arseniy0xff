@@ -11,16 +11,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Mozilla+Text:wght@200..700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+    <script>
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-theme');
+    }
+</script>
+
 
 </head>
 
 <body>
-
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
     <div class="container">
 
         <header>
+
             <h1>Arseniy Lucius</h1>
+
             <div class="meta-info">
                 <span>📍 Tbilisi, Georgia</span>
                 <span>💬 WA: @luciusar</span>
@@ -92,7 +108,11 @@
                         datasets.</li>
                     <li>Created real-time data filtering layers and visual tracking modules.</li>
                 </ul>
-                <div class="project-tech">Tech: Python, PyQt6, Matplotlib</div>
+                <div class="project-tech">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyQt6</span>
+                    <span class="tag">Matplotlib</span>
+                </div>
             </div>
 
             <div class="project-card">
@@ -108,7 +128,15 @@
                     <li>Built a lightweight local web server via Flask to facilitate cross-device local network sync.
                     </li>
                 </ul>
-                <div class="project-tech">Tech: Python, PyQt6, Flask, JS, Bootstrap, Cryptography</div>
+                <div class="project-tech">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyQt6</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">JS</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">Cryptography</span>
+                    <span class="tag">NoSQL</span>
+                </div>
             </div>
 
             <div class="project-card">
@@ -127,7 +155,13 @@
                     <li>Completed full hardware cycle: schematic routing, custom board layouts, and CAD enclosure
                         prototyping.</li>
                 </ul>
-                <div class="project-tech">Tech: C/C++, Arduino, ESP boards, ATtiny, CAD/CNC</div>
+                <div class="project-tech">
+                    <span class="tag">C/C++</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">ESP boards</span>
+                    <span class="tag">ATtiny</span>
+                    <span class="tag">CAD/CNC</span>
+                </div>
             </div>
 
             <div class="project-card">
@@ -148,7 +182,11 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 Templates (Server / PC)<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ⚙️ Equipment Accounting (Server DB_0, WebServer_0, PC_0...)
                 </div>
-                <div class="project-tech">Tech: Python, PyQt6</div>
+                <div class="project-tech">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyQt6</span>
+                    <span class="tag">NoSQL</span>
+                </div>
             </div>
 
             <div class="project-card">
@@ -163,7 +201,11 @@
                     <li>Mastered production-ready workflows using Django, automated code-testing, optimal database
                         indexing, CI/CD, and verbose documentation.</li>
                 </ul>
-                <div class="project-tech">Tech: Django, Django ORM, Admin, Bootstrap, CI/CD</div>
+                <div class="project-tech">
+                    <span class="tag">Django</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">CI/CD</span>
+                </div>
             </div>
 
         </section>
@@ -172,25 +214,63 @@
             <h2>Hackathons & Intensives</h2>
             <div class="grid-two-col">
                 <div class="simple-card">
-                    <h4>📊 GISIT Hackathon</h4>
+                    <h4>GISIT Hackathon</h4>
                     <p><strong>Role: Big Data Analyst.</strong> Processed heavy geospatial data and open-source map
                         structures (OSM) using Pandas and Pillow to discover mathematically ideal environments for
                         placement of wind turbines.</p>
+                    <div class="project-tech">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Pillow</span>
+                        <span class="tag">OSM</span>
+
+                    </div>
                 </div>
                 <div class="simple-card">
-                    <h4>🤖 Yandex ML Intensive</h4>
+                    <h4>Yandex ML Intensive</h4>
                     <p><strong>Autumn 2024.</strong> Highly selective Data Science program. Built multiple predictive
                         and analytical models from scratch using PyTorch, NumPy, and Matplotlib. <a
                             href="https://github.com/Arseniy0xff/ml_yaProj2024" target="_blank">[Repo]</a></p>
                 </div>
                 <div class="simple-card">
-                    <h4>💬 LLM Provider Service</h4>
+                    <h4>Educational program "Machine Learning"</h4>
+                    <p> <strong>Autumn 2024.</strong> <br>
+                        as part of the Yandex Lyceum Specialization project;
+                    </p>
+                    <div class="project-tech">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="simple-card">
+                    <h4>Yandex Advanced Python Course – Data Visualization and Analysis</h4>
+                    <p><strong>October 1, 2023 – May 31, 2024</strong><br>
+                    </p>
+                    <div class="project-tech">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="simple-card">
+                    <h4>LLM Provider Service</h4>
                     <p>Co-developed a comprehensive automated AI-powered agent for business routing and file handling.
                         Configured Google Drive API hooks. <a
                             href="https://github.com/Arseniy0xff/llm_provide_service_en" target="_blank">[Repo]</a></p>
+                    <div class="project-tech">
+                        <span class="tag">Python</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">JWT</span>
+                        <span class="tag">SQLAlchemy</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Swagger</span>
+
+                    </div>
                 </div>
                 <div class="simple-card">
-                    <h4>📅 schdl</h4>
+                    <h4>schdl</h4>
                     <p>An elegant college schedule utility layer. Features heavy local client-side caching mechanism
                         allowing near-instant content distribution even if proxy servers are offline.</p>
                 </div>
@@ -224,7 +304,7 @@
         </section>
 
         <footer>
-            <p>© <span id="copyrightYear">  </span> ARSENIY_LUCIUS // BUILT TO CREATE</p>
+            <p>© <span id="copyrightYear"> </span> ARSENIY_LUCIUS // BUILT TO CREATE</p>
         </footer>
 
     </div>

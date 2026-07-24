@@ -1,275 +1,353 @@
    :root {
-            --bg-color: #fafafa;
-            --text-color: #101010;
-            --text-muted: ##252525;
-            --accent-color: #000000;
-            --border-color: #dddddd;
-            --card-bg: #ffffff;
-            /* --pixel-font: 'Bitcount Single', system-ui; */
-            --pixel-font: "Doto", sans-serif;
-            --main-font: 'JetBrains Mono', monospace;
-        }
+       --bg-color: #fafafa;
+       --text-color: #101010;
+       --text-muted: #252525;
+       --accent-color: #000000;
+       --border-color: #dddddd;
+       --card-bg: #ffffff;
+       /* --pixel-font: 'Bitcount Single', system-ui; */
+       /* --pixel-font: "Doto", sans-serif; */
+       --pixel-font: "Bitcount Grid Double", system-ui;
+       --main-font: "Mozilla Text", sans-serif;
+   }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--main-font);
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
+   html {
+       transition: none !important;
+   }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+   html.dark-theme {
+       transition: none !important;
+   }
 
 
-        header {
-            border-bottom: 3px double var(--border-color);
-            padding-bottom: 25px;
-            margin-bottom: 40px;
-        }
+   html.transitionsEnabled,
+   html.transitionsEnabled body,
+   html.transitionsEnabled * {
+       transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+   }
 
-        h1 {
-            font-family: var(--pixel-font);
-            font-optical-sizing: auto;
-            font-weight: 900;
-            font-style: normal;
+   body {
+       background-color: var(--bg-color);
+       color: var(--text-color);
+       font-family: var(--main-font);
+       line-height: 1.6;
+       padding: 10px 10px;
+       transition: background-color 0.25s ease, color 0.25s ease;
+   }
 
-            font-size: 4rem;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
+   :root,
+   body,
+   .container,
+   .project-card,
+   .simple-card,
+   .tree-model {
+       transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+   }
 
-        .meta-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
+   .theme-toggle {
+       margin: 0 auto 20px auto;
+       /* display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       gap: 8px; */
+       padding: 8px 14px;
+       border: 1px solid var(--border-color);
+       background: var(--card-bg);
+       color: var(--text-color);
+       cursor: pointer;
+       border-radius: 999px;
+       /* font-size: 0.9rem; */
+       transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+   }
 
-        .meta-info a {
-            color: var(--text-color);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--text-color);
-        }
+   .theme-toggle:hover {
+       border-color: var(--accent-color);
+   }
 
-        .meta-info a:hover {
-            border-bottom-style: solid;
-        }
+   header {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
 
-        
-        section {
-            margin-bottom: 40px;
-        }
+   .container {
+       max-width: 800px;
+       margin: 0 auto;
+   }
 
-        h2 {
-            font-family: var(--pixel-font);
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-        }
 
-        h2::before {
-            content: "> ";
-            margin-right: 8px;
-            color: var(--text-muted);
-        }
+   header {
+       border-bottom: 3px double var(--border-color);
+       padding-bottom: 25px;
+       margin-bottom: 40px;
+   }
 
-        .summary-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
+   a,
+   a:visited {
+       color: #1f8fff;
+       text-decoration: none;
+   }
 
-        /* Навыки (Теги) */
-        .skills-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+   h1 {
+       font-family: var(--pixel-font);
+       font-optical-sizing: auto;
+       font-weight: 400;
+       font-style: normal;
+       font-size: 4rem;
 
-        .skills-category {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-        }
+       text-align: center;
+       color: var(--accent-color);
+       margin-bottom: 15px;
+       text-transform: uppercase;
+   }
 
-        .skills-category strong {
-            min-width: 130px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--text-color);
-        }
+   .meta-info {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 15px;
+       font-size: 0.9rem;
+       color: var(--text-muted);
+   }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+   .meta-info a {
+       color: var(--text-color);
+       text-decoration: none;
+       border-bottom: 1px dashed var(--text-color);
+   }
 
-        .tag {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2px 8px;
-            font-size: 0.8rem;
-            border-radius: 3px;
-        }
+   .meta-info a:hover {
+       border-bottom-style: solid;
+   }
 
-        /* Проекты */
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            position: relative;
-        }
 
-        .project-card:hover {
-            border-color: var(--accent-color);
-        }
+   section {
+       margin-bottom: 40px;
+   }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
+   h2 {
+       font-family: var(--pixel-font);
+       font-size: 1.6rem;
+       color: var(--accent-color);
+       margin-bottom: 20px;
+       text-transform: uppercase;
+       display: flex;
+       align-items: center;
+       font-weight: 300;
+   }
 
-        .project-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
+   h2::before {
+       content: "> ";
+       margin-right: 8px;
+       color: var(--text-muted);
+   }
 
-        .project-title a {
-            color: var(--accent-color);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-        }
+   .summary-text {
+       font-size: 0.95rem;
+       color: var(--text-muted);
+       margin-bottom: 15px;
+   }
 
-        .project-title a:hover {
-            border-bottom-color: var(--accent-color);
-        }
+   /* Навыки (Теги) */
+   .skills-grid {
+       display: flex;
+       flex-direction: column;
+       gap: 12px;
+   }
 
-        .project-role {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            background: #eeeeee;
-            padding: 2px 6px;
-            font-weight: bold;
-        }
+   .skills-category {
+       display: flex;
+       align-items: baseline;
+       gap: 10px;
+   }
 
-        .project-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
+   .skills-category strong {
+       min-width: 130px;
+       font-size: 0.85rem;
+       text-transform: uppercase;
+       color: var(--text-color);
+   }
 
-        .project-bullets {
-            list-style-type: none;
-            padding-left: 0;
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
+   .tags {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 8px;
+   }
 
-        .project-bullets li {
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 5px;
-        }
+   .tag {
+       background: var(--card-bg);
+       border: 1px solid var(--border-color);
+       padding: 2px 8px;
+       font-size: 0.8rem;
+       border-radius: 3px;
+   }
 
-        .project-bullets li::before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: var(--text-muted);
-            font-size: 0.7rem;
-            top: 1px;
-        }
+   /* Проекты */
+   .project-card {
+       background: var(--card-bg);
+       border: 1px solid var(--border-color);
+       padding: 20px;
+       margin-bottom: 15px;
+       border-radius: 4px;
+       position: relative;
+   }
 
-        .project-tech {
-            font-size: 0.8rem;
-            color: var(--text-color);
-            font-style: italic;
-            border-top: 1px dotted var(--border-color);
-            padding-top: 8px;
-        }
+   .project-card:hover {
+       border-color: var(--accent-color);
+   }
 
-        /* Структура дерева для ERP */
-        .tree-model {
-            background: #fdfdfd;
-            border-left: 2px dashed var(--border-color);
-            padding-left: 15px;
-            margin: 10px 0;
-            font-size: 0.85rem;
-            font-family: var(--main-font);
-        }
+   .project-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: baseline;
+       margin-bottom: 10px;
+       flex-wrap: wrap;
+       gap: 5px;
+   }
 
-        /* Хактоны и Прочее */
-        .grid-two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
+   .project-title {
+       font-weight: 700;
+       font-size: 1.1rem;
+   }
 
-        @media (max-width: 600px) {
-            .grid-two-col {
-                grid-template-columns: 1fr;
-            }
+   .project-title a {
+       color: var(--accent-color);
+       text-decoration: none;
+       border-bottom: 1px solid transparent;
+   }
 
-            .skills-category {
-                flex-direction: column;
-                gap: 5px;
-            }
-            h1 {
-              line-height: 4rem;
-              margin-bottom: 60px;
-            }
-        }
+   .project-title a:hover {
+       border-bottom-color: var(--accent-color);
+   }
 
-        .simple-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 4px;
-        }
+   .project-role {
+       font-size: 0.8rem;
+       text-transform: uppercase;
+       background: #eeeeee;
+       padding: 2px 6px;
+       font-weight: bold;
+   }
 
-        .simple-card h4 {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
+   .dark-theme {
+       --bg-color: #0d1117;
+       --text-color: #e8edf7;
+       --text-muted: #9aa5b1;
+       /* --accent-color: #58a6ff; */
+       --accent-color: #e2b858;
+       --border-color: #30363d;
+       --card-bg: #161b22;
+   }
 
-        .simple-card h4 a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
+   .dark-theme .project-role {
+       background: #21262d;
+   }
 
-        .simple-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+   .dark-theme .tree-model {
+       background: #0b1118;
+   }
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-family: var(--pixel-font);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
+   .project-desc {
+       font-size: 0.9rem;
+       color: var(--text-muted);
+       margin-bottom: 12px;
+   }
+
+   .project-bullets {
+       list-style-type: none;
+       padding-left: 0;
+       font-size: 0.9rem;
+       margin-bottom: 12px;
+   }
+
+   .project-bullets li {
+       position: relative;
+       padding-left: 15px;
+       margin-bottom: 5px;
+   }
+
+   .project-bullets li::before {
+       content: "▪";
+       position: absolute;
+       left: 0;
+       color: var(--text-muted);
+       font-size: 0.7rem;
+       top: 1px;
+   }
+
+   .project-tech {
+       font-size: 0.8rem;
+       color: var(--text-color);
+       /* font-style: italic; */
+       border-top: 1px dotted var(--border-color);
+       padding-top: 8px;
+   }
+
+   /* Структура дерева для ERP */
+   .tree-model {
+       background: #fdfdfd;
+       border-left: 2px dashed var(--border-color);
+       padding-left: 15px;
+       margin: 10px 0;
+       font-size: 0.85rem;
+       font-family: var(--main-font);
+   }
+
+   /* Хактоны и Прочее */
+   .grid-two-col {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 15px;
+   }
+
+   @media (max-width: 600px) {
+       .grid-two-col {
+           grid-template-columns: 1fr;
+       }
+
+       .skills-category {
+           flex-direction: column;
+           gap: 5px;
+       }
+
+       h1 {
+           line-height: 4rem;
+           margin-bottom: 60px;
+       }
+   }
+
+   .simple-card {
+       background: var(--card-bg);
+       border: 1px solid var(--border-color);
+       padding: 15px;
+       border-radius: 4px;
+   }
+
+   .simple-card h4 {
+       font-size: 0.95rem;
+       margin-bottom: 5px;
+   }
+
+   .simple-card h4 a {
+       color: var(--accent-color);
+       text-decoration: none;
+   }
+
+   .simple-card p {
+       font-size: 0.85rem;
+       color: var(--text-muted);
+   }
+
+   footer {
+       text-align: center;
+       margin-top: 60px;
+       padding-top: 20px;
+       border-top: 1px solid var(--border-color);
+       font-family: var(--pixel-font);
+       font-size: 0.8rem;
+       color: var(--text-muted);
+   }
