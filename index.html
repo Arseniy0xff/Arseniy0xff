@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arseniy Lucius | Software Engineer</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +16,11 @@
 
     <link rel="stylesheet" href="style.css">
     <script>
-    if (localStorage.getItem('theme') === 'dark' || 
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark-theme');
-    }
-</script>
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
 
 
 </head>
@@ -49,7 +45,7 @@
         <section>
             <h2>About Me</h2>
             <p class="summary-text">
-                Passionate and product-oriented Software Engineer specializing in Python backend development (Flask),
+                Passionate and product-oriented Software Engineer specializing in Python backend development,
                 custom data processing architectures, and hardware integration. Mentored by a Google engineer on
                 production-grade standards.
             </p>
@@ -277,37 +273,84 @@
             </div>
         </section>
 
-        <section class="grid-two-col">
-            <div>
-                <h2>Other Creations</h2>
+        <section>
+
+            <h2>Other Creations</h2>
+
+            <div class="project-card">
                 <ul class="project-bullets" style="font-size: 0.85rem;">
-                    <li><strong>Wave Simulations:</strong> Interactive UI application calculating wave physics. <a
-                            href="https://github.com/Arseniy0xff/ThreeWindowsApp" target="_blank">[Link]</a></li>
-                    <li><strong>IT-nn Website:</strong> Injected custom frontend JavaScript event logic onto live
-                        company pages.</li>
-                    <li><strong>Web Utilities:</strong> Interactive browser Crossword generator & EE Calculator (Ohm's
-                        law, LCM/GCD, bits converter).</li>
+                    <li>
+                        <strong>Wave Simulations:</strong>
+                        <p class="project-desc">
+                            Interactive UI application calculating wave physics. <a
+                                href="https://github.com/Arseniy0xff/ThreeWindowsApp" target="_blank">[Link]</a>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>IT-nn Website:</strong>
+                        <p class="project-desc">
+                            Injected custom frontend JavaScript event logic onto live
+                            company pages. <a href="https://it-nn.com" target="_blank">[Link]</a>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Web Utilities:</strong>
+                        <p class="project-desc">Interactive browser Crossword generator & EE Calculator (Ohm's
+                            law, LCM/GCD, bits converter).</p>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <h2>Education & Bio</h2>
-                <p class="project-desc" style="margin-bottom: 5px;"><strong>Information Systems & Programming
-                        Degree</strong></p>
-                <p class="project-desc" style="font-size: 0.8rem; margin-bottom: 15px;">College Academic Path | 2022 -
-                    2026</p>
+        </section>
+        <section class="grid-two-col">
 
-                <p class="project-desc">📺 <strong>YouTube Tech Creator</strong></p>
-                <p class="project-desc" style="font-size: 0.8rem;">Launched a DIY/Hardware educational channel <a
-                        href="https://www.youtube.com/@DIY_Electronic_tech" target="_blank">@DIY_Electronic_tech</a> at
-                    age 13. Filmed code reviews, firmware setup guides, and structural circuitry breakdowns.</p>
+            <div>
+                <h2>Education</h2>
+                <p class="project-desc" style="margin-bottom: 5px; font-size: 1rem;">
+                    <strong>
+                        Information Systems & Programming Degree
+                    </strong>
+                </p>
+                <p class="project-desc">
+                    College Academic Path || 2022 - 2026
+                </p>
+            </div>
+            <div>
+
+                <h2>Bio</h2>
+                <p class="project-desc" style="margin-bottom: 5px; font-size: 1rem;">
+                    <strong>YouTube Tech Creator</strong>
+                </p>
+                <p class="project-desc">
+
+                    Launched a DIY/Hardware educational channel <a href="https://www.youtube.com/@DIY_Electronic_tech"
+                        target="_blank">@DIY_Electronic_tech</a>
+                    at
+                    age 13. Filmed code reviews, firmware setup guides, and structural circuitry breakdowns.
+                </p>
+                <p class="project-desc">
+                    I enjoy sports, such as swimming and mountain biking.
+                    <strong>My hobbies</strong> include photography, video editing,
+                    and electronic engineering.
+                </p>
+                <p class="project-desc">
+                    The
+                    <strong>areas I enjoy and want to explore further</strong> include embedded systems, radio control,
+                    machine
+                    learning/computer vision, UAVs, and cross-platform development (e.g., Dart and Flutter).
+                </p>
+
+                <p class="project-desc">
+                    I'm also currently learning <strong>German</strong>.
+                </p>
+
             </div>
         </section>
-
-        <footer>
-            <p>© <span id="copyrightYear"> </span> ARSENIY_LUCIUS // BUILT TO CREATE</p>
-        </footer>
-
     </div>
+
+    <footer>
+        <p>© <span id="copyrightYear"> </span> ARSENIY_LUCIUS // BUILT TO CREATE</p>
+    </footer>
+
     <script src="js.js"></script>
 
 </body>

@@ -8,7 +8,7 @@
 
 ## SUMMARY
 
-Passionate and product-oriented Software Engineer with a solid background in Python, backend development (Flask), and custom data processing. Proven track record of developing high-performance streaming pipelines, building secure applications, and collaborating in hackathons. Fast learner with strong technical communication skills, mentored by a Google engineer on industry best practices.
+Passionate and product-oriented Software Engineer with a solid background in Python, backend development, and custom data processing. Proven track record of developing high-performance streaming pipelines, building secure applications, and collaborating in hackathons. Fast learner with strong technical communication skills, mentored by a Google engineer on industry best practices.
 
 ## TECHNICAL SKILLS
 
