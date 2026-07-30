@@ -1,10 +1,9 @@
-# Hi, I’m Arseniy
+# Hi, I’m Arseniy ([Web Ver](https://arseniy0xff.github.io/Arseniy0xff/))
 
 - **City/Country**: Tbilisi, Georgia
-- **WhatsApp**: @loocius
+- **WhatsApp**: @luciusar
 - [arseniy.lukyanov@gmail.com](arseniy.lukyanov@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/arseniy-lucius/)
-- [WebCV](https://arseniy0xff.github.io/Arseniy0xff/)
 
 ## SUMMARY
 
