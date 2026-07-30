@@ -7,13 +7,18 @@
 
 ## SUMMARY
 
-Passionate and product-oriented Software Engineer with a solid background in Python, backend development, and custom data processing. Proven track record of developing high-performance streaming pipelines, building secure applications, and collaborating in hackathons. Fast learner with strong technical communication skills, mentored by a Google engineer on industry best practices.
+ **Junior Python Backend / Data Developer** focused on building practical tools, backend services, and data-driven applications. I work with Python, Django, Flask, Pandas, NumPy, PyTorch, SQL, Docker, and REST APIs, and I enjoy turning complex problems into reliable, maintainable software.
+
+I have hands-on experience through independent projects, hackathons, and intensive training, including systems for **log analysis, secure data storage, IoT networking, and AI/ML-based services**. I’m currently looking for a junior or trainee role in an international company where I can grow as a backend or data engineer and contribute from day one.
 
 ## TECHNICAL SKILLS
 
-- **Languages:** Python, JavaScript, C/C++ (Arduino), SQL, C# (Windows Forms)
-- **Frameworks & Libraries:** Flask, PyQt6, NumPy, Pandas, PyTorch, Matplotlib, Bootstrap
-- **Backend & DevOps:** REST API, Database Architecture, Git, CI/CD, Cryptography (AES-GCM, Fernet)
+- **Languages:** Python, SQL, C/C++, JavaScript  
+- **Backend:** Django, Flask, FastAPI, REST API, Swagger  
+- **Data & ML:** Pandas, NumPy, PyTorch, scikit-learn, data analysis, machine learning basics  
+- **Databases:** PostgreSQL, SQLite, SQLAlchemy  
+- **DevOps & Tools:** Docker, Git, GitHub, Linux, CI/CD basics  
+- **Other:** Logging systems, encryption, IoT, API integration, async programming, testing
 - **Hardware & IoT:** Prototyping, Circuit Design, CAD, Microcontrollers (ESP, ATtiny, Arduino)
 
 ## PROJECTS & EXPERIENCE
